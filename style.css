@@ -15,25 +15,26 @@ body {
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 /* Header Section */
 .header {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    background: linear-gradient(90deg, #0d253f, #1b4d89);
     color: #fff;
-    padding: 20px 0;
-    position: sticky;
+    padding: 15px 0;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease; /* Transition for background change */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
 }
 
 .header.scrolled {
-    background: #333; /* Darken the navbar when scrolled */
+    background: #222;
 }
 
 .header .container {
@@ -41,6 +42,7 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 
 .logo {
     font-size: 1.8rem;
