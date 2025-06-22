@@ -1,44 +1,49 @@
-// Sticky Navbar Color Change on Scroll
-window.onscroll = function() {
-    let navbar = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-};
-
-// Scroll Reveal Effect for Sections
-const sections = document.querySelectorAll('.about, .about-content, .skills, .projects, .certificates');
-const observerOptions = {
-    root: null,
-    threshold: 0.5,
-};
-
-const revealSection = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-};
-
-const observer = new IntersectionObserver(revealSection, observerOptions);
-
-sections.forEach(section => {
-    section.classList.add('hidden');
-    observer.observe(section);
+// Initialize AOS
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
 });
 
-// Add CSS for Hidden/Visible Effect
-document.styleSheets[0].insertRule(`
-    .hidden {
-        opacity: 0;
-        transform: translateY(50px);
+// Sticky Header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
-    .visible {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-`);
+});
+
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Dark Mode Toggle
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const icon = themeToggle.querySelector('i');
+    icon.classList.toggle('fa-moon');
+    icon.classList.toggle('fa-sun');
+});
+
+// EmailJS Integration for Contact Form
+emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => {
+            alert('Message sent successfully!');
+            this.reset();
+        }, (error) => {
+            alert('Failed to send message. Please try again.');
+            console.error('EmailJS Error:', error);
+        });
+});
