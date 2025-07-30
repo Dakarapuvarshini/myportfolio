@@ -161,6 +161,7 @@ body::before {
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-small);
   box-shadow: 0 8px 32px var(--shadow-light);
+  transition: var(--transition-smooth);
 }
 
 .glass-card:hover {

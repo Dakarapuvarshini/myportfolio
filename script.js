@@ -28,7 +28,7 @@ function initializePortfolio() {
 
 // Scroll Progress Indicator
 function setupScrollProgress() {
-   
+    // Create progress bar if it doesn't exist
     if (!document.querySelector('.scroll-progress')) {
         const progressBar = document.createElement('div');
         progressBar.className = 'scroll-progress';
@@ -46,6 +46,8 @@ function setupScrollProgress() {
         progressBar.style.width = scrollPercent + '%';
     });
 }
+
+// Smooth Scrolling for Navigation Links
 function setupSmoothScrolling() {
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -65,8 +67,10 @@ function setupSmoothScrolling() {
                     behavior: 'smooth'
                 });
                 
+                // Update active nav link
                 updateActiveNavLink(this);
                 
+                // Close mobile menu if open
                 closeMobileMenu();
             }
         });
@@ -138,7 +142,21 @@ function setupThemeToggle() {
         updateThemeIcon();
     }
     
-   
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        // Save theme preference
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        
+        updateThemeIcon();
+        
+        // Add animation effect
+        themeToggle.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            themeToggle.style.transform = '';
+        }, 150);
+    });
 }
 
 function updateThemeIcon() {
