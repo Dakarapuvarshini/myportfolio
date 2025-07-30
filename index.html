@@ -9,9 +9,9 @@
     <title>DAKARAPU's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <header class="header">
@@ -19,97 +19,103 @@
             <h1 class="logo">DAKARAPU<span class="highlight">VARSHINI</span></h1>
             <nav class="navbar">
                 <div class="hamburger">
-                    <i class="fas fa-bars"></i>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#profiles" class="nav-link">Profiles</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#certificates" class="nav-link">Certificates</a></li>
                     <li><a href="#contact-section" class="nav-link">Contact me</a></li>
                 </ul>
             </nav>
-            <button class="theme-toggle" aria-label="Toggle Dark Mode">
-                <i class="fas fa-moon"></i>
-            </button>
+           
         </div>
     </header>
 
-    <section id="about" class="about" data-aos="fade-up">
+    <section id="about" class="about fade-in">
         <div class="container">
             <div class="about-content">
-                <div class="about-photo">
-                    <img src="images/pp.jpg" alt="Dakarapu Varshini" loading="lazy">
-                </div>
-                <div class="about-text">
-                    <h2>About Me</h2>
+                <div class="about-text slide-in-left">
+                    <h2>Hi, I'm <span class="highlight">Dakarapu Varshini</span></h2>
                     <p>
-                        Hi, I'm <span class="highlight">Dakarapu Varshini</span> — a passionate and driven individual eager to contribute to a dynamic and forward-thinking organization. I aspire to bring fresh ideas, a strong work ethic, and a collaborative spirit to every team I join. With a commitment to continuous learning and innovation, I aim to grow both personally and professionally while positively impacting my workplace.
+                        A passionate and driven individual eager to contribute to a dynamic and forward-thinking organization. I aspire to bring fresh ideas, a strong work ethic, and a collaborative spirit to every team I join. With a commitment to continuous learning and innovation, I aim to grow both personally and professionally while positively impacting my workplace.
                     </p>
                     <a href="https://drive.google.com/file/d/1-vlG3Nr7yjvnuQ9waAiKccn-yDBCDcHR/view?usp=drivesdk" class="btn primary-btn">Download Resume</a>
+                </div>
+                <div class="about-photo slide-in-right">
+                    <img src="images/pp.jpg" alt="Dakarapu Varshini" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills" data-aos="fade-up">
+    <section id="skills" class="skills fade-in">
         <div class="container">
-            <h2>Skills & Public Profiles</h2>
+            <h2 class="scale-in">Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card" data-aos="zoom-in">
+                <div class="skill-card glass-card">
                     <img src="images/lang.webp" alt="Programming Languages" loading="lazy">
                     <h3>Languages & Core Skills</h3>
                     <p>Proficient in C, Java, and JavaScript. Solid understanding of Data Structures & Algorithms. Experienced with HTML and CSS for responsive design.</p>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="skill-card glass-card">
                     <img src="images/database.webp" alt="Databases" loading="lazy">
                     <h3>Databases</h3>
                     <p>Hands-on experience with MySQL, Oracle, and MongoDB. Capable of designing and optimizing relational and NoSQL databases.</p>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="skill-card glass-card">
                     <img src="images/frameworks.png" alt="Frameworks" loading="lazy">
                     <h3>Frameworks & Libraries</h3>
                     <p>Worked with Spring Boot, Hibernate, JSF, JSP, and React.js to build scalable and maintainable applications.</p>
                 </div>
-                <div class="skill cardamom" data-aos="zoom-in" data-aos-delay="300">
+                <div class="skill-card glass-card">
                     <img src="images/tools.webp" alt="Tools and Platforms" loading="lazy">
                     <h3>Tools & Platforms</h3>
                     <p>Familiar with Figma for UI/UX design. Experience with cloud platforms like AWS and Google Cloud Platform (GCP).</p>
                 </div>
             </div>
-            <h2>Public Profiles</h2>
+        </div>
+    </section>
+
+    <section id="profiles" class="profiles fade-in">
+        <div class="container">
+            <h2 class="scale-in">Public Profiles</h2>
             <div class="profiles-grid">
-                <div class="profile-card" data-aos="flip-left">
+                <div class="profile-card glass-card">
                     <a href="https://www.codechef.com/users/varshini_78" target="_blank">
                         <img src="images/codechef.jpg" alt="CodeChef Logo" loading="lazy">
                         <p>CodeChef</p>
                     </a>
                 </div>
-                <div class="profile-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="profile-card glass-card">
                     <a href="https://leetcode.com/u/2200031301/" target="_blank">
                         <img src="images/leetcode.png" alt="LeetCode Logo" loading="lazy">
                         <p>LeetCode</p>
                     </a>
                 </div>
-                <div class="profile-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="profile-card glass-card">
                     <a href="https://www.hackerrank.com/profile/h2200031301" target="_blank">
                         <img src="images/hackerrank.png" alt="HackerRank Logo" loading="lazy">
                         <p>HackerRank</p>
                     </a>
                 </div>
-                <div class="profile-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="profile-card glass-card">
                     <a href="https://www.linkedin.com/in/dakarapu-varshini-4715b0257/" target="_blank">
                         <img src="images/linkedin.png" alt="LinkedIn Logo" loading="lazy">
                         <p>LinkedIn</p>
                     </a>
                 </div>
-                <div class="profile-card" data-aos="flip-left" data-aos-delay="400">
+                <div class="profile-card glass-card">
                     <a href="https://github.com/Dakarapuvarshini" target="_blank">
                         <img src="images/github.webp" alt="GitHub Logo" loading="lazy">
                         <p>GitHub</p>
                     </a>
                 </div>
-                <div class="profile-card" data-aos="flip-left" data-aos-delay="500">
+                <div class="profile-card glass-card">
                     <a href="https://www.geeksforgeeks.org/user/dakarapu_varshini/" target="_blank">
                         <img src="images/geekforgeeks.png" alt="Geeksforgeeks Logo" loading="lazy">
                         <p>GeeksforGeeks</p>
@@ -119,28 +125,28 @@
         </div>
     </section>
 
-    <section id="projects" class="projects" data-aos="fade-up">
+    <section id="projects" class="projects fade-in">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 class="scale-in">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
                     <img src="images/proj_1.jpeg" alt="Online Exam Portal" loading="lazy">
                     <h3>Online Exam Portal</h3>
                     <p>Developed modules for managing an online exam portal, including exam scheduling, question management, student registration, result generation, and secure payment processing for exam fees. The system also handled user authentication, performance tracking, and report generation.</p>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card">
                     <a href="https://github.com/bandaruphanindra/real-estate-management" target="_blank">
                         <img src="images/proj_2.jpg" alt="Real Estate Management" loading="lazy">
                     </a>
                     <h3>Real Estate Management</h3>
                     <p>Developed a web application to manage and facilitate property search, price comparison, and real estate listings across multiple platforms, enhancing user experience with efficient property discovery and pricing insights.</p>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card">
                     <img src="images/proj_3.jpeg" alt="ERP System" loading="lazy">
                     <h3>ERP System</h3>
                     <p>Developed a full-stack web application for managing employee records, department activities, and job postings within an ERP system; streamlined processes for efficient tracking of employee performance, project management, and recruitment activities.</p>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-card">
                     <a href="https://github.com/Dakarapuvarshini/FARMTECH.git" target="_blank">
                         <img src="images/proj_4.jpg" alt="E-Commerce Platform" loading="lazy">
                     </a>
@@ -151,35 +157,35 @@
         </div>
     </section>
 
-    <section id="certificates" class="certificates" data-aos="fade-up">
+    <section id="certificates" class="certificates fade-in">
         <div class="container">
-            <h2>Certificates</h2>
+            <h2 class="scale-in">Certificates</h2>
             <div class="certificates-grid">
-                <div class="certificate-card" data-aos="zoom-in">
+                <div class="certificate-card">
                     <img src="images/redhat.png" alt="Red Hat Enterprise Application Development" loading="lazy">
                     <h3>Red Hat Enterprise Application Development</h3>
                     <p>Certificate showcasing advanced skills in enterprise Java development.</p>
                     <a href="https://www.linkedin.com/posts/dakarapu-varshini-4715b0257_redhatcertifies-javaee-enterpriseapplicationdeveloper-activity-7247841943127265280-_hwn?utm_source=share&utm_medium=member_desktop" class="btn secondary-btn" target="_blank">View Certificate</a>
                 </div>
-                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="certificate-card">
                     <img src="images/rpa1.jpg" alt="Automation Anywhere Certified" loading="lazy">
                     <h3>Automation Anywhere Certified</h3>
                     <p>Automation Anywhere certification for RPA expertise.</p>
                     <a href="https://www.linkedin.com/posts/dakarapu-varshini-4715b0257_thrilled-to-announce-ive-obtained-a-new-activity-7234179242656157696-pL64?utm_source=share&utm_medium=member_desktop" class="btn secondary-btn" target="_blank">View Certificate</a>
                 </div>
-                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="certificate-card">
                     <img src="images/clous.jpg" alt="Aviatrix ACE Certification" loading="lazy">
                     <h3>Aviatrix ACE Certification</h3>
                     <p>Cloud networking certification to validate multicloud and cloud networking knowledge.</p>
                     <a href="https://www.linkedin.com/posts/dakarapu-varshini-4715b0257_im-excited-to-share-that-ive-earned-the-activity-7240408705450528768-uiaa?utm_source=share&utm_medium=member_desktop" class="btn secondary-btn" target="_blank">View Certificate</a>
                 </div>
-                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="certificate-card">
                     <img src="images/sales.png" alt="Salesforce AI Certified" loading="lazy">
                     <h3>Salesforce AI Certified</h3>
                     <p>Certified in Salesforce AI technologies, demonstrating expertise in artificial intelligence and its applications within the Salesforce ecosystem.</p>
-                    <a href="#" class="btn secondary-btn" target="_blank">View Certificate</a> <!-- Replace with actual link -->
+                    <a href="#" class="btn secondary-btn" target="_blank">View Certificate</a>
                 </div>
-                <div class="certificate-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="certificate-card">
                     <img src="images/aicte.jpg" alt="RPA Developer" loading="lazy">
                     <h3>RPA Developer</h3>
                     <p>Certified in Robotic Process Automation (RPA), with expertise in designing, developing, and deploying automation solutions to streamline business processes.</p>
@@ -189,13 +195,13 @@
         </div>
     </section>
 
-    <section id="contact-section" class="contact-section" data-aos="fade-up">
-        <h2 class="section-title">Contact Me</h2>
-        <p class="section-subtitle"><span>Get in Touch</span></p>
+    <section id="contact-section" class="contact-section fade-in">
+        <h2 class="section-title scale-in">Contact Me</h2>
+        <p class="section-subtitle">Get in Touch</p>
         <div class="contact-container">
-            <div class="contact-info" data-aos="fade-right">
+            <div class="contact-info slide-in-left">
                 <h3>Get in Touch</h3>
-                <p>Feel free to reach out for collaborations, projects, or discussions.<br>Let’s build something great together!</p>
+                <p>Feel free to reach out for collaborations, projects, or discussions.<br>Let's build something great together!</p>
                 <div class="contact-details">
                     <div class="detail">
                         <i class="fas fa-user"></i>
@@ -227,7 +233,7 @@
                     <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="contact-form" data-aos="fade-left">
+            <div class="contact-form slide-in-right">
                 <h3>Message Me</h3>
                 <form id="contact-form">
                     <div class="input-group">
@@ -236,7 +242,7 @@
                     </div>
                     <input type="text" name="subject" placeholder="Subject" required>
                     <textarea name="message" placeholder="Message.." required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -251,7 +257,6 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
